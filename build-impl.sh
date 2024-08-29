@@ -18,7 +18,7 @@ SLURM_VERSION_NUMBER=$(printf '0x%02x%02x%02x' $major $minor $patch)
 echo "SLURM_VERSION_NUMBER: ${SLURM_VERSION_NUMBER}"
 
 # Create slurm_version.h from .in
-sed "s/#undef SLURM_VERSION_NUMBER.*/#define SLURM_VERSION_NUMBER $SLURM_VERSION_NUMBER/" \
+sed "s/^#undef SLURM_VERSION_NUMBER.*/#define SLURM_VERSION_NUMBER $SLURM_VERSION_NUMBER/" \
     slurm-${slurm_version}/slurm/slurm_version.h.in > slurm-${slurm_version}/slurm/slurm_version.h
 INCLUDE="-I$(realpath slurm-${slurm_version})"
 
