@@ -24,6 +24,6 @@ INCLUDE="-I$(realpath slurm-${slurm_version})"
 
 # Build RPM
 mkdir rpmbuild
-CXXFLAGS=$INCLUDE CFLAGS=$INCLUDE ./src/rpm/make-rpm.sh --slurm-version=$slurm_version ./rpmbuild 2> stderr.log 1> stdout.log
+CXXFLAGS=$INCLUDE CFLAGS=$INCLUDE ./src/rpm/make-rpm.sh --slurm-version=$slurm_version ./rpmbuild 2> ${_scriptdir}/stderr.log 1> ${_scriptdir}/stdout.log
 
 find ./rpmbuild/RPMS -iname '*.rpm' -exec cp {} ${_scriptdir} \;
