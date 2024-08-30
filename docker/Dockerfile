@@ -11,6 +11,7 @@ RUN zypper install -y       \
     python3-pip             \
     git                     \
     libopenssl-devel        \
+    bubblewrap              \
     rpm-build
 # slurm-uenv-mount
 # install python
