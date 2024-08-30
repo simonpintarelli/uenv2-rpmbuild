@@ -7,8 +7,6 @@ RUN zypper install -y       \
     curl                    \
     tar                     \
     bzip2                   \
-    python3                 \
-    python3-pip             \
     git                     \
     libopenssl-devel        \
     libmount-devel          \
