@@ -8,6 +8,7 @@ RUN zypper install -y       \
     tar                     \
     bzip2                   \
     python3                 \
+    python3-pip             \
     git                     \
     libopenssl-devel        \
     rpm-build
