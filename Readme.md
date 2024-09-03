@@ -1,7 +1,7 @@
 # USAGE
 
 ```
-podman build -f docker/Dockerfile
+podman build -f docker/Dockerfile -t uenv2-rpmbuild
 podman run -v $(pwd):/work:rw -w /work -it uenv2-rpmbuild:latest sh -c 'CXX=g++-12 CC=gcc-12 ./build.sh'
 ```
 
