@@ -2,7 +2,7 @@
 
 ```
 podman build -f docker/Dockerfile
-podman run --privileged -v $(pwd):/work:rw -w /work -it uenv2-rpmbuild:latest sh -c 'CXX=g++-12 CC=gcc-12 ./build.sh'
+podman run -v $(pwd):/work:rw -w /work -it uenv2-rpmbuild:latest sh -c 'CXX=g++-12 CC=gcc-12 ./build.sh'
 ```
 
 # Podman config on vCluster
