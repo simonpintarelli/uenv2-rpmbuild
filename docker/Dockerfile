@@ -8,6 +8,7 @@ RUN zypper install -y       \
     tar                     \
     bzip2                   \
     git                     \
+    xz-devel                \
     libopenssl-devel        \
     libmount-devel          \
     bubblewrap              \
