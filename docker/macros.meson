@@ -13,7 +13,7 @@
 	--prefix=%{_prefix} \\\
 	--bindir=%{_bindir} \\\
 	--sbindir=%{_sbindir} \\\
-	--libexecdir=%{_libexecdir} \\\
+	--libexecdir=/usr/libexec \\\
 	--libdir=%{_libdir} \\\
 	--localstatedir=%{_var} \\\
 	--sharedstatedir=%{_sharedstatedir} \\\
@@ -23,7 +23,7 @@
 	--mandir=%{_mandir} \\\
 	--infodir=%{_infodir} \\\
 	--localedir=%{_datadir}/locale \\\
-	-Dcli=false \\\
+	-Dcli=true \\\
 	-Dslurm_plugin=true \\\
 	%{nil}
 
