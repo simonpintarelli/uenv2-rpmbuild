@@ -13,7 +13,7 @@ RUN zypper install -y       \
     libmount-devel          \
     bubblewrap              \
     rpm-build
-# slurm-uenv-mount
+
 # install python
 RUN curl -O https://www.python.org/ftp/python/3.10.11/Python-3.10.11.tgz \
 && tar xzvf Python-3.10.11.tgz \
