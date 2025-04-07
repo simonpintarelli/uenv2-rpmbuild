@@ -11,7 +11,7 @@
   meson setup %{__sourcedir} %{__builddir}  \\\
 	%{?_enable_debug:-Ddebug=true} \\\
 	--prefix=%{_prefix} \\\
-  --buildtype=release \\\
+	--buildtype=release \\\
 	--bindir=%{_bindir} \\\
 	--sbindir=%{_sbindir} \\\
 	--libexecdir=/usr/libexec \\\
