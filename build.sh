@@ -32,11 +32,13 @@ wd=$(mktemp -d)
     slurm-${slurm_version}/slurm/slurm_version.h.in >slurm-${slurm_version}/slurm/slurm_version.h
   INCLUDE="-I$(realpath slurm-${slurm_version})"
 
+
+  FLAGS="-O2 -m64 -fmessage-length=0 -D_FORTIFY_SOURCE=2 -fstack-protector"
   # Build RPM
   mkdir rpmbuild
   LDFLAGS="-Wl,--disable-new-dtags -Wl,-rpath,/lib64 -Wl,-rpath,/usr/lib64" \
-         CXXFLAGS="$INCLUDE $(rpm --eval %\{optflags\})" \
-         CFLAGS="$INCLUDE $(rpm --eval %\{optflags\})" \
+         CXXFLAGS="$INCLUDE $FLAGS" \
+         CFLAGS="$INCLUDE $FLAGS" \
          ./src/rpm/make-rpm.sh --slurm-version=$slurm_version ./rpmbuild \
          2>${_scriptdir}/stderr.log 1>${_scriptdir}/stdout.log
 
