@@ -2,9 +2,9 @@
 
 set -euo pipefail
 
-export ref=v1.0.0
+export ref=v8.1.0
 export remote=https://github.com/eth-cscs/uenv2
-export slurm_version=23.11.7
+export slurm_version=25.05.1
 
 _scriptdir=$(realpath "$(dirname "${BASH_SOURCE[0]}")")
 
