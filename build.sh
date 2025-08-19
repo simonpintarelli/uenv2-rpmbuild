@@ -33,7 +33,7 @@ wd=$(mktemp -d)
   INCLUDE="-I$(realpath slurm-${slurm_version})"
 
 
-  FLAGS="-O2 -m64 -fmessage-length=0 -D_FORTIFY_SOURCE=2 -fstack-protector"
+  FLAGS="-O2 -fmessage-length=0 -D_FORTIFY_SOURCE=2 -fstack-protector"
   # Build RPM
   mkdir rpmbuild
   LDFLAGS="-Wl,--disable-new-dtags -Wl,-rpath,/lib64 -Wl,-rpath,/usr/lib64" \
